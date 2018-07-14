@@ -1,0 +1,17 @@
+version: '3.4'
+services:
+  sql-server:
+    image: microsoft/mssql-server-linux:2017-latest
+    environment:
+      - "ACCEPT_EULA=Y"
+      - "SA_PASSWORD=<YourStrong!Passw0rd>"
+    ports:
+      - "2433:1433"
+  server-kick:
+    image: namehillsoftware/dotnet-core-roundhouse:latest
+    environment:
+      - "DB_SERVER=sql-server"
+    depends_on:
+      - sql-server
+    entrypoint: [ "wait-for-it.sh", "sql-server:1433", "--", "dotnet", "/rh/RoundhousE/rh.dll" ]
+    command: [ "-c", "Data Source=sql-server;Initial Catalog=MyDb;User id=sa;Password=<YourStrong!Passw0rd>" ]
