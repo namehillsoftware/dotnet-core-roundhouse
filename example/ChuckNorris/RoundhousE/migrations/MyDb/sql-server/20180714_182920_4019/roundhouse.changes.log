@@ -1,0 +1,62 @@
+2018-07-14 18:29:20,503 [INFO ] - Running RoundhousE v1.0.0.0 against sql-server - MyDb.
+2018-07-14 18:29:20,528 [INFO ] - Looking in . for scripts to run.
+2018-07-14 18:29:20,528 [INFO ] - Please press enter when ready to kick...
+2018-07-14 18:29:20,529 [INFO ] - ==================================================
+2018-07-14 18:29:20,529 [INFO ] - Setup, Backup, Create/Restore/Drop
+2018-07-14 18:29:20,529 [INFO ] - ==================================================
+2018-07-14 18:29:20,531 [INFO ] - Creating MyDb database on sql-server server if it doesn't exist.
+2018-07-14 18:29:25,475 [INFO ] - ==================================================
+2018-07-14 18:29:25,475 [INFO ] - RoundhousE Structure
+2018-07-14 18:29:25,475 [INFO ] - ==================================================
+2018-07-14 18:29:25,475 [INFO ] -  Running database type specific tasks.
+2018-07-14 18:29:25,476 [INFO ] -  Creating RoundhousE schema if it doesn't exist.
+2018-07-14 18:29:25,483 [INFO ] -  Creating [Version] table if it doesn't exist.
+2018-07-14 18:29:25,483 [INFO ] -  Creating [ScriptsRun] table if it doesn't exist.
+2018-07-14 18:29:25,483 [INFO ] -  Creating [ScriptsRunErrors] table if it doesn't exist.
+2018-07-14 18:29:25,978 [INFO ] - ==================================================
+2018-07-14 18:29:25,978 [INFO ] - Versioning
+2018-07-14 18:29:25,978 [INFO ] - ==================================================
+2018-07-14 18:29:26,206 [INFO ] -  Attempting to resolve version from /scripts/_BuildInfo.xml using //buildInfo/version.
+2018-07-14 18:29:26,207 [WARN ] - Unable to get version from xml file /scripts/_BuildInfo.xml. File doesn't exist.
+2018-07-14 18:29:26,208 [INFO ] -  Migrating MyDb from version 0 to 0.
+2018-07-14 18:29:26,208 [INFO ] -  Versioning MyDb database with version 0 based on .
+2018-07-14 18:29:26,276 [INFO ] - ==================================================
+2018-07-14 18:29:26,276 [INFO ] - Migration Scripts
+2018-07-14 18:29:26,276 [INFO ] - ==================================================
+2018-07-14 18:29:26,319 [INFO ] - --------------------------------------------------
+2018-07-14 18:29:26,319 [INFO ] - Looking for AlterDatabase scripts in "./alterDatabase".
+2018-07-14 18:29:26,319 [INFO ] - --------------------------------------------------
+2018-07-14 18:29:26,321 [INFO ] - --------------------------------------------------
+2018-07-14 18:29:26,321 [INFO ] - Looking for Run Before Update scripts in "./runBeforeUp".
+2018-07-14 18:29:26,321 [INFO ] - --------------------------------------------------
+2018-07-14 18:29:26,321 [INFO ] - --------------------------------------------------
+2018-07-14 18:29:26,321 [INFO ] - Looking for Update scripts in "./up". These should be one time only scripts.
+2018-07-14 18:29:26,321 [INFO ] - --------------------------------------------------
+2018-07-14 18:29:26,345 [INFO ] -  Running create-server.sql on sql-server - MyDb.
+2018-07-14 18:29:26,387 [INFO ] - --------------------------------------------------
+2018-07-14 18:29:26,387 [INFO ] - Looking for Run First After Update scripts in "./runFirstAfterUp".
+2018-07-14 18:29:26,387 [INFO ] - --------------------------------------------------
+2018-07-14 18:29:26,387 [INFO ] - --------------------------------------------------
+2018-07-14 18:29:26,387 [INFO ] - Looking for Function scripts in "./functions".
+2018-07-14 18:29:26,387 [INFO ] - --------------------------------------------------
+2018-07-14 18:29:26,388 [INFO ] - --------------------------------------------------
+2018-07-14 18:29:26,388 [INFO ] - Looking for View scripts in "./views".
+2018-07-14 18:29:26,388 [INFO ] - --------------------------------------------------
+2018-07-14 18:29:26,388 [INFO ] - --------------------------------------------------
+2018-07-14 18:29:26,388 [INFO ] - Looking for Stored Procedure scripts in "./sprocs".
+2018-07-14 18:29:26,388 [INFO ] - --------------------------------------------------
+2018-07-14 18:29:26,388 [INFO ] - --------------------------------------------------
+2018-07-14 18:29:26,388 [INFO ] - Looking for Triggers scripts in "./triggers".
+2018-07-14 18:29:26,388 [INFO ] - --------------------------------------------------
+2018-07-14 18:29:26,388 [INFO ] - --------------------------------------------------
+2018-07-14 18:29:26,388 [INFO ] - Looking for Index scripts in "./indexes".
+2018-07-14 18:29:26,388 [INFO ] - --------------------------------------------------
+2018-07-14 18:29:26,388 [INFO ] - --------------------------------------------------
+2018-07-14 18:29:26,388 [INFO ] - Looking for Run after Other Anytime Scripts scripts in "./runAfterOtherAnyTimeScripts".
+2018-07-14 18:29:26,389 [INFO ] - --------------------------------------------------
+2018-07-14 18:29:26,389 [INFO ] - --------------------------------------------------
+2018-07-14 18:29:26,389 [INFO ] - Looking for Permission scripts in "./permissions". These scripts will run every time
+2018-07-14 18:29:26,389 [INFO ] - --------------------------------------------------
+2018-07-14 18:29:26,389 [INFO ] - 
+
+RoundhousE v1.0.0.0 has kicked your database (MyDb)! You are now at version 0. All changes and backups can be found at "ChuckNorris/RoundhousE/migrations/MyDb/sql-server/20180714_182920_4019".

@@ -13,5 +13,6 @@ services:
       - "DB_SERVER=sql-server"
     depends_on:
       - sql-server
-    entrypoint: [ "wait-for-it.sh", "sql-server:1433", "--", "dotnet", "/rh/RoundhousE/rh.dll" ]
-    command: [ "-c", "Data Source=sql-server;Initial Catalog=MyDb;User id=sa;Password=<YourStrong!Passw0rd>" ]
+    volumes:
+      - ./:/scripts
+    command: [ "-c", "Data Source=sql-server;Initial Catalog=MyDb;User id=sa;Password=<YourStrong!Passw0rd>;Connection Timeout=120" ]
