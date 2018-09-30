@@ -1,13 +1,9 @@
-FROM microsoft/dotnet:2.1-runtime
+FROM microsoft/dotnet:2.1-sdk
 
 MAINTAINER dvedvick@gmail.com
 
-WORKDIR /usr/local
-RUN curl -L https://ci.appveyor.com/api/buildjobs/p7qbptlu5cxmwvqd/artifacts/code_drop/packages/RoundhousE.1.0.0-RC.2.tar.gz -o rh.tar.gz; \
-    tar -zxvf rh.tar.gz; \
-    sed -i 's/\#\!\/bin\/sh/\#\!\/bin\/bash/' ./RoundhousE/rh; \
-    ln -s /usr/local/RoundhousE/rh /usr/local/bin/rh;
+ENV PATH="$PATH:/root/.dotnet/tools"
 
-WORKDIR /scripts
+RUN dotnet tool install dotnet-roundhouse -g --add-source https://www.myget.org/F/roundhouse/api/v3/index.json --version 1.0.0-beta.1
 
-ENTRYPOINT [ "rh" ]
+ENTRYPOINT [ "dotnet-rh" ]
