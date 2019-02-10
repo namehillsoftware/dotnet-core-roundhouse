@@ -4,6 +4,6 @@ MAINTAINER dvedvick@gmail.com
 
 ENV PATH="$PATH:/root/.dotnet/tools"
 
-RUN dotnet tool install dotnet-roundhouse -g --version 1.0.2
+RUN dotnet tool install dotnet-roundhouse -g --version 1.0.4
 
 ENTRYPOINT [ "rh" ]
